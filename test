@@ -1,0 +1,10 @@
+{defun double-recursive {y}
+  {cond
+    	{{null y} nil}; empty list return nil
+	{{atom y} nil}; y is not a list return nil
+	{cond
+		{{atom {car y}} nil}
+   		{{> {length {car y}} 1} {print’{omg list}}}
+	{t{append {list {car y} {car y}} {double-recursive {cdr y}}}}
+	};
+};
