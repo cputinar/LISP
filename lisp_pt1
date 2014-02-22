@@ -40,16 +40,16 @@
 
 —————2————
 
-(defun double-recursive (y)
+(defun rdouble (y)
   (cond
     ((null y) nil); empty list return nil
     ((atom y) nil); y is not a list return nil
-	((atom (car y)) (append (list (car y) (car y)) (double-recursive (cdr y))))	
-  (t(append(list(double-recursive (car y))) (double-recursive (cdr y))))
+	((atom (car y)) (append (list (car y) (car y)) (rdouble (cdr y))))	
+  (t(append(list(rdouble (car y))) (rdouble (cdr y))))
 	);
 );
 
-(print(double-recursive’((4 5) 1 2 (4 5) 3)))
+(print(rdouble’((4 5) 1 2 (4 5) 3)))
 
 
 (defun rdouble(y)
