@@ -1,0 +1,38 @@
+;part 1a
+
+(defun double-recursive (y)
+  (cond
+    ((null y) nil); empty list return nil
+  	((atom y) nil); y is not a list return nil
+		(t (append (list (car y) (car y)) (double-recursive (cdr y))))
+	);
+);
+
+
+(print(double-recursive'(1 2 (4 5) 3)))
+
+;part 1b
+
+(defun double-iterative (y)
+  (do
+		(
+			(y y (cdr y)) 
+			(x nil (append x (list (car y) (car y))))
+		);variable declarations, intialization, and update rules
+		
+		( (atom y) x)
+	);end do
+  )
+  
+  (print(double-iterative'(1 2 (4 5) 3)))
+
+;part 1c
+
+(defun double-mapcar (y)
+  (cond
+     ((atom y) nil)
+    (t (mapcar (lambda (arg) (list arg arg)) y))
+)
+)
+
+(print(double-mapcar '(1 2 (4 5) 3)))
