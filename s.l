@@ -10,7 +10,7 @@
 );
 
 
-(print(double-recursive'(1 2 (4 5) 3)))
+;(print(double-recursive'(1 2 (4 5) 3)))
 
 ;part 1b
 
@@ -25,7 +25,7 @@
 	);end do
   )
   
-  (print(double-iterative'(1 2 (4 5) 3)))
+ ; (print(double-iterative'(1 2 (4 5) 3)))
 
 ;part 1c
 
@@ -36,7 +36,7 @@
 )
 )
 
-(print(double-mapcar '(1 2 (4 5) 3)))
+;(print(double-mapcar '(1 2 (4 5) 3)))
 
 ;—————2————
 
@@ -49,7 +49,7 @@
 	);
 );
 
-(print(double-recursive’((4 5) 1 2 (4 5) 3)))
+;(print(double-recursive’((4 5) 1 2 (4 5) 3)))
 
 
 (defun rdouble(y)
@@ -142,7 +142,7 @@
 				'(evaledRewriteExpr (eval rewriteExpr))
 				(list 'evaledExpr (list 'eval x))
 			)
-			'(list (equal evaledRewriteExpr evaledExpr) evaledExpr evaledRewriteExpr) ;format of answer
+			'(list (equal evaledRewriteExpr evaledExpr) evaledExpr evaledRewriteExpr)
 		)
 	)
 )
