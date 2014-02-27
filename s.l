@@ -134,14 +134,12 @@
 
 ;—————5————
 
-(defun check (x)
-	(list
-    (equal (
-      eval x) 
-    eval (
-      rewrite x)))
+(defun check(x)
+  (list(equal 
     (eval x) 
-    (eval (
-      rewrite x))
+    (eval (rewrite x))) 
+  (eval x) 
+  (eval (rewrite x))
+  )
 
 )
