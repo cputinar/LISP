@@ -1,12 +1,23 @@
-*** fill in the following;
-*** repeat it for each group member;
-*** list group members alphabetically by last name
+Name(last): Chumley
+Name(first): Dawn
+Login_ID: airdrown
 
-Name(last): xxxx
-Name(first): xxxx
-Login_ID: xxxxx
+Name(last): Hsu
+Name(first): Robert
+Login_ID: rhsu14
 
-*** Give the status of your work; here's a sample.
+Name(last): Lew
+Name(first): Garrett
+Login_ID: glew
+
+Name(last): Putinar
+Name(first): Corina
+Login_ID: cputinar
+
+Name(last): Yu
+Name(first): Maria
+Login_ID: mariajyu
+
 
 Status:
 
@@ -14,6 +25,7 @@ part1: Works on all tests.
 part2: Works on all tests.
 part3: Works on all tests.
 part4: Works on all tests.
-part5: Works on only the first test case.
+part5: Works on all tests.
 
-Overall: Any comment/discussion related to this HW.
+
+Overall: LISP was a fun program to learn!
