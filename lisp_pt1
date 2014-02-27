@@ -83,13 +83,11 @@
 (defun rewrite(x)
   (cond
     ((null x) nil) ;empty list return nil
-    ((numberp x)  x)
-    ((atom x) x)
-    ((symbolp (car x)) ;if it's a symbol 
-      (cond
-        ((equal (car x) 'if)  
+    ((numberp x)  x) 
+    ((atom x) x) ;x is not a list return x
+    ((symbolp (car x)) ;x is a symbol
+      (cond ((equal (car x) 'if)  
           (cond
-
             ((or (numberp (cadr x)) (null (cadr x))) (cons 'cond (append(list (append(list (cadr x) (rewrite(caddr x)))))
               (cond
                 ((null (cdddr x))nil)
@@ -115,9 +113,7 @@
             (t (append(list (car x)) (rewrite (cdr x))))
           )
 
-        );if words/symbols
-
-      )
+        ))
     )
     ((numberp (car x)) 
       (cond
@@ -134,3 +130,7 @@
 
 —————5————
 
+defun(check(x)
+
+
+)

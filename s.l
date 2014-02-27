@@ -115,19 +115,19 @@
             (t (append(list (car x)) (rewrite (cdr x))))
           )
 
-        );if words/symbols
+        )
 
       )
     )
     ((numberp (car x)) 
       (cond
-        ((or (numberp (cadr x)) (null (cadr x))) (append (list(car x)) (rewrite (cdr x))));if cdr is a number do this
+        ((or (numberp (cadr x)) (null (cadr x))) (append (list(car x)) (rewrite (cdr x))))
         ((listp (cadr x)) (append (list(car x))  (list(rewrite (cadr x))) (rewrite (cddr x)))
         )
       )
 
     )
-    ((listp (car x)) (append(rewrite(car x)) (rewrite(cdr x)))) ;if cdr is a list
+    ((listp (car x)) (append(rewrite(car x)) (rewrite(cdr x)))) 
   )
 )
 
@@ -135,14 +135,13 @@
 ;—————5————
 
 (defun check (x)
-	(eval
-		(list 'let*
-			(list
-				(list 'rewriteExpr (list 'rewrite x))
-				'(evaledRewriteExpr (eval rewriteExpr))
-				(list 'evaledExpr (list 'eval x))
-			)
-			'(list (equal evaledRewriteExpr evaledExpr) evaledExpr evaledRewriteExpr)
-		)
-	)
+	(list
+    (equal (
+      eval x) 
+    eval (
+      rewrite x)))
+    (eval x) 
+    (eval (
+      rewrite x))
+
 )
